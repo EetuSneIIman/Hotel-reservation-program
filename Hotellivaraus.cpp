@@ -1,58 +1,5 @@
 
-/*
-    Hotellivarausjärjestelmä
-
-    Ohjelmalla voidaan varata huoneita niin kauan kun huoneita on. Varattavien huoneiden määrä arvotaan ohjelman alussa.
-    Jokaiselle varaukselle annetaan oma varaus id, huone, hinta ja varaajan tiedot (nimi, huoneiden määrä hotellihuonessa(huonekoko) ja öiden määrä)
-    Ohjelma laskee hinnan huonekoon ja öiden määrän mukaan. Hinta lisätään kokonaishintaan joka näytetään varattujen huoneiden kanssa samassa taulukossa
-    Varauksen voi myös poistaa ja poistetun varauksen hinta poistetaan kokonaishinnasta
-    Poistettu huone myös poistetaan "varatut huoneet" vectorista joka tarkistaa onko varauksien määrä ylittänyt varattavien huoneiden kokonaismäärän
-    Ohjelmassa on selkeä menu-rakenne joka kertoo käyttäjälle ohjeita kokoajan. Ohjelma antaa virheilmoituksen jokaisesta käyttäjän virheestä ja pyytää antamaan vastauksen uudestaan.
-
-    Liitteenä palautuksessa ohjelman toiminnasta kertova flowchart, joka on hieman alkeellinen ja käytin lähinnä 1. pisteen ohjelman tekoon. (Hotellisovellus flowchart.png) ja .exe tiedosto(Hotellivaraus.exe)
-
-    Ohjelmassa on vain yksi aliohjelma, koska en vain keksinyt sisältöä toiselle. Ohjelma toimii ilmankin joten miksi lisätä "turhaa sisältöä". Ymmärrän aliohjelmien tarvittavuuden ohjelman luettavuuden kannalta
-    mutta kirjoittamani ohjelma on järjestelmällinen, toimiva ja yksinkertainen ilman useita aliohjelmia.
-
-    mielestäni työni on neljän (4) pisteen arvoinen. Pistemäärän vaadittavasta sisällöstä puuttuu monen hengen huoneiden erottelu ja yksi aliohjelma. Koen kuitenkin ylittäneeni kolmen (3) pisteen rajan
-    Arvosanaksi ohjelmastani oletan saavani 3. Ohjelma on mielestäni keskiverto suoritus. Tosin peruskurssilla osaamisen keskiarvo voi olla pienempi kuin oletan
-    Minulla on ohjelmistokehittäjän koulutus ja vertaan osaamistani muiden kanssani valmistuneiden osaamiseen, en tällä kurssilla olleiden osaamiseen.
-
-    En halunnut lisätä ohjelmaan huoneiden hakua nimellä tai numerolla, koska käyttäjä saa helposti haettua kaikki tekemänsä varaukset. Jos haluaisin lisätä sen ohjelmaan, tapahtuisi se seuraavasti
-
-    Ohjelmassa esiintyy bugi kun lasketaan hinnan yhteismäärää. Koitin korjata bugia muutaman päivän ajan mutta en keksi mikä siinä on vikana. Vectorin indeksi on oikein, cout tulostaa oikean määrän poistettavaa hintaa
-    mutta hinta on silti väärin.
-
-    bugi on rivillä 477:
-
-    Esimerkki: 1 varaus hintaa 300, yhteishintaa on 300. Poistetaan varaus arvoltaan 300 ja yhteishinnaksi tulee -300
-               3 varausta arvoiltaan 400, 100 ja 100, yhteishintaa on 600. Poistetaan varaus arvoltaan 400 ja yhteishinnaksi tulee 400.
-
-    Kun yhteishintaan lisätään hintaa, se toimii oikein. Ongelma ilmenee vain poistaessa varauksia.
-
-    cout << "Etsi varauksia varaajan nimellä: ";
-    cin << etsiVaraus;
-
-    for (int i = 0; i <= v.size(); i++)
-    if (etsiVaraus == v[i].Nimi)
-    {
-        Tulostetaan kaikkien varauksien tiedot jotka sisältävät vastatun nimen.
-    }
-
-
-    Ominaisuudet: Selkeä menu
-                  Input virheiden tarkistus
-                  Hinnan määritys öiden ja huonekoon mukaan
-                  Arvotaan huoneiden määrä välillä 30-70
-                  Arvotaan jokaiselle varaukselle oma varaus id
-                  Arvotaan hinnalle alennus
-                  Arvotaan jokaiseen varaukseen huonenumero joka ilmoitetaan käyttäjille varattujen huoneiden listassa
-                  Haluttu varaus voidaan poistaa varauksen järjestysnumerolla
-                  Kerrotaan käyttäjälle varauksen kokonaishinta
-                  Varauslista toteutettu toimimaan joka tilanteessa aina oikeassa "koossa" antamalla nimelle maksimi tulostus määrä ja setw left arvot
-                  Ohjelma toimii niin kauan kunnes kaikki huoneet on varattu (ilmoitetaan, että huoneita ei ole) tai käyttäjä lopettaa sovelluksen käytön (menu painike 4)
-                  Käytetään vain vectoreita listojen tekoon
-
+/*  
     Versio 1.0
     C++
     Eetu Snellman
